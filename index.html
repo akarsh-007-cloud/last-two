@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Books</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pocket Books 🖋️📚</h1>
+        <!-- Merge PDFs -->
+        <div class="tool-section">
+            <h2>Merge PDFs</h2>
+            <input type="file" id="merge-input" multiple accept=".pdf">
+            <button id="merge-btn">Merge PDFs</button>
+        </div>
+
+        <!-- Split PDF -->
+        <div class="tool-section">
+            <h2>Split PDF</h2>
+            <input type="file" id="split-input" accept=".pdf">
+            <button id="split-btn">Split PDF</button>
+        </div>
+
+        <!-- PDF to Images -->
+        <div class="tool-section">
+            <h2>Convert PDF to Images</h2>
+            <input type="file" id="pdf-to-images-input" accept=".pdf">
+            <button id="pdf-to-images-btn">Convert to Images</button>
+            <div id="pdf-to-images-output"></div>
+        </div>
+
+        <!-- Add Watermark -->
+        <div class="tool-section">
+            <h2>Add Watermark</h2>
+            <input type="file" id="watermark-input" accept=".pdf">
+            <input type="text" id="watermark-text" placeholder="Enter watermark text">
+            <input type="number" id="watermark-angle" placeholder="Enter angle (e.g., 45)">
+            <button id="watermark-btn">Add Watermark</button>
+        </div>
+
+        <!-- Compress PDF -->
+        <div class="tool-section">
+            <h2>Compress PDF</h2>
+            <input type="file" id="compress-input" accept=".pdf">
+            <button id="compress-btn">Compress PDF</button>
+        </div>
+        <!-- Rotate PDF -->
+        <div class="tool-section">
+            <h2>Rotate PDF Pages</h2>
+            <input type="file" id="rotate-input" accept=".pdf">
+            <input type="number" id="rotate-degree" placeholder="Rotation degree (multiples of 90)">
+            <button id="rotate-btn">Rotate Pages</button>
+        </div>
+
+        <!-- Rearrange PDF Pages -->
+        <div class="tool-section">
+            <h2>Rearrange PDF Pages</h2>
+            <input type="file" id="rearrange-input" accept=".pdf">
+            <input type="text" id="rearrange-order" placeholder="New order (e.g., 3,1,2)">
+            <button id="rearrange-btn">Rearrange Pages</button>
+        </div>
+
+        <!-- Add Page Numbers -->
+        <div class="tool-section">
+            <h2>Add Page Numbers</h2>
+            <input type="file" id="page-numbers-input" accept=".pdf">
+            <select id="page-number-position">
+                <option value="bottom-middle">Bottom Middle</option>
+                <option value="bottom-right">Bottom Right</option>
+                <option value="top-right">Top Right</option>
+            </select>
+            <button id="page-numbers-btn">Add Page Numbers</button>
+        </div>
+
+        <!-- Images to PDF -->
+        <div class="tool-section">
+            <h2>Convert Images to PDF</h2>
+            <input type="file" id="image-to-pdf-input" multiple accept="image/*">
+            <button id="image-to-pdf-btn">Convert to PDF</button>
+        </div>
+
+         <!-- Remove Pages -->
+         <div class="tool-section">
+            <h2>Remove Pages</h2>
+            <input type="file" id="remove-pages-input" accept=".pdf">
+            <input type="text" id="remove-pages-list" placeholder="Pages to remove (e.g., 2,4) 2,4 will be removed">
+            <button id="remove-pages-btn">Remove Pages</button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+<!-- in this code rotation works -->
